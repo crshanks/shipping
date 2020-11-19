@@ -32,7 +32,7 @@ tag_and_push_all() {
         TAG=$1
     fi
     for m in ./docker/*/; do
-        REPO=${GROUP}/$(basename $m)
+        REPO=${GROUP}/$(basename sock-shop-shipping-nr)
         if [[ "$COMMIT" != "$TAG" ]]; then
             docker tag ${REPO}:${COMMIT} ${REPO}:${TAG}
         fi
